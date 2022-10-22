@@ -14,12 +14,8 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
-    - name: enter work dictionary
-      run: cd MyLibrary
-    - name: enter
-      run: pwd
     - name: Build
-      run: swift build -v
+      run: swift build
     - name: Run tests
       run: swift test -v
 
