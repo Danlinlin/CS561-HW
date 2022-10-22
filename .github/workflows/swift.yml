@@ -14,11 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: enter
-      working-directory: ./MyLibrary
-    - name: check
-      run: pwd
     - name: Build
+      working-directory: ./MyLibrary
       run: swift build -v
     - name: Run tests
       run: swift test -v
