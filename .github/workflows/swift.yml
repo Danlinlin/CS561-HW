@@ -7,7 +7,7 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "danlin/add-tests" ]
 
 jobs:
   build:
@@ -16,6 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: enter work dictionary
+      run: cd MyLibrary
     - name: Build
       run: swift build -v
     - name: Force Xcode 11
