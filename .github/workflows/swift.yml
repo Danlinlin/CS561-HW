@@ -1,0 +1,22 @@
+name: Swift1
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "danlin/add-tests" ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: enter work dictionary
+      run: cd MyLibrary
+    - name: Build
+      run: swift build -v
+    - name: Force Xcode 11
+      run: sudo xcode-select -switch /Applications/Xcode_14.0.1.app
+    - name: Run tests
+      run: swift test -v
+
