@@ -17,6 +17,8 @@ jobs:
     - name: enter
       run: |
         cd MyLibrary
+    - name: check
+      run: pwd
     - name: Build
       run: swift build -v
     - name: Run tests
