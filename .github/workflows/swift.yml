@@ -11,12 +11,11 @@ on:
     
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: enter
-      run: |
-        cd /Users/runner/work/CS561-HW/CS561-HW/MyLibrary
+      working-directory: ./MyLibrary
     - name: check
       run: pwd
     - name: Build
