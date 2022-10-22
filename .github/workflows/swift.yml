@@ -6,7 +6,7 @@ name: Swift
 on:
   pull_request:
     branches: 
-           - "danlin/add-tests"
+           - "main"
     
 jobs:
   build:
