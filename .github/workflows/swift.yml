@@ -4,14 +4,9 @@
 name: Swift
 
 on:
-  push:
-    branches: 
-           - "main"
-           - "danlin/add-tests"
   pull_request:
     branches: 
            - "main"
-           - "danlin/add-tests"
     
 jobs:
   build:
