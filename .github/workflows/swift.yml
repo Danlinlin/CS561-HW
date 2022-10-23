@@ -19,7 +19,7 @@ jobs:
       run: npm ci
     - name: run server
       working-directory: ./mock-weather-server
-      run: npm run serve
+      run: pm2 start app.js
     - name: Build
       working-directory: ./MyLibrary
       run: swift build -v
