@@ -12,9 +12,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+    - name: install dependencies
+      working-directory: ./mock-weather-server
+      run: npm install -g pm2
+    - name: run server
+      working-directory: ./mock-weather-server
+      run: pm2 start app.js
     - name: Build
       working-directory: ./MyLibrary
       run: swift build -v
     - name: Run tests
       working-directory: ./MyLibrary
       run: swift test -v
+
