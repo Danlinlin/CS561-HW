@@ -13,7 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js
-      working-directory: ./mock-weather-server
       uses: actions/setup-node@v2
     - name: install dependencies
       working-directory: ./mock-weather-server
