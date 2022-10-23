@@ -13,14 +13,18 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js
+      working-directory: ./mock-weather-server
       uses: actions/setup-node@v2
     - name: install dependencies
-    - run: npm ci
+      working-directory: ./mock-weather-server
+      run: npm ci
     - name: run server
-    - run: npm run serve
+      working-directory: ./mock-weather-server
+      run: npm run serve
     - name: Build
       working-directory: ./MyLibrary
       run: swift build -v
     - name: Run tests
       working-directory: ./MyLibrary
       run: swift test -v
+
