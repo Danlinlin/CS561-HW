@@ -23,6 +23,6 @@ final class WeatherServiceImplIntegrationTest: XCTestCase{
         
         //Then
         //Check the temprature is what you expect
-        XCTAssertEqual(temp, 59)
+        XCTAssertEqual(temp, 52)
     }
 }
