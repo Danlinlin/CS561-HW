@@ -12,6 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with: 
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run serve
     - name: Build
       working-directory: ./MyLibrary
       run: swift build -v
