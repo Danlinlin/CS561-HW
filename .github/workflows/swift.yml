@@ -16,7 +16,7 @@ jobs:
       uses: actions/setup-node@v2
     - name: install dependencies
       working-directory: ./mock-weather-server
-      run: npm ci
+      run: npm install
     - name: run server
       working-directory: ./mock-weather-server
       run: pm2 start app.js
