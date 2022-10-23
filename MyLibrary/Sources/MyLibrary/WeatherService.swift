@@ -10,8 +10,8 @@ enum BaseUrl :String {
 }
 
 class WeatherServiceImpl: WeatherService {
-    let url = "\(BaseUrl.production.rawValue)?q=corvallis&units=imperial&appid=a44cb62c1bc7e4bccb0c3d467d57c483"
-    //let url = "\(BaseUrl.mockServer.rawValue)?q=corvallis&units=imperial&appid=a44cb62c1bc7e4bccb0c3d467d57c483"
+    //let url = "\(BaseUrl.production.rawValue)?q=corvallis&units=imperial&appid=a44cb62c1bc7e4bccb0c3d467d57c483"
+    let url = "\(BaseUrl.mockServer.rawValue)?q=corvallis&units=imperial&appid=a44cb62c1bc7e4bccb0c3d467d57c483"
 
     func getTemperature() async throws -> Int {
         return try await withCheckedThrowingContinuation { continuation in
